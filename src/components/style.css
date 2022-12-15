@@ -5,14 +5,17 @@
    
     
 }
+
 .startdiv{
     height: 70px;
     width: 200px;
     background-color:yellow;
    margin: 95px;
+   opacity: 1;
   
     border-radius:36% 40% 26% 35% / 32% 31% 10% 12% ;
 }
+
 .aaa{
 
     text-align: center;
@@ -25,10 +28,52 @@
     display: flex;
     justify-content: center;
     align-items:flex;
-    border-radius:50% 49% 33% 35% / 5% 5% 22% 25% 
+    border-radius:50% 49% 33% 35% / 5% 5% 22% 25% ;
+    opacity: 0.888;
+    border-color: yellow;
+
+    border:solid  yellow 6px;
+    
+    
 }
-.bbb{
-    position: absolute;
-  top: 0;
-   
+/* ---------------------------end of start page--------------------------------------------- */
+.questionsNDanswers{
+    height: 400px;
+    width:  450px;
+    background-image: url("./images/purple1.webp")  ;
+    justify-content:center;
+    align-items:flex;
+    position: fixed;
+    text-align: center;
+    top: 25vh;
+    margin-left: 33%;
+    border-radius: 10% 10% 10% 10% / 10% 12% 10% 10%  ;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainQ{
+    background-image: url("./images/trivia7.jpg") ;
+    height:90vh;
+}
+
+#endbtn{
+    background-color: green;
+    height:50px;
+    width: 100px;
+    border-radius: 10% 10% 10% 10% / 10% 12% 10% 10%  ;
+    
+
+}
+#enddiv{
+    height:300px;
+    width: 300px;
+    background-color: rgb(95, 9, 225);
+    position: fixed;
+    display: flex;
+    top: 30vh;
+    margin-left: 38%;
+}
+#endstring{
+    font-size:large;
 }

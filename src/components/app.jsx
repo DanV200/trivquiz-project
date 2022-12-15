@@ -472,7 +472,7 @@ class App extends Component {
         },
       ],
     randomQuestions:[],
-    
+    score:0
 
    
 
@@ -490,6 +490,8 @@ class App extends Component {
        questions={this.state.randomQuestions}
      
        randomQ={()=>this.randomQ()}
+       increseScore={()=>this.increseScore()}
+       score={this.state.score}
     />
       </div>
       
@@ -504,7 +506,9 @@ class App extends Component {
     this.setState({randomQuestions:this.state.questions.slice(0,20)})
     console.log(this.state.randomQuestions);
   }
-  
+  increseScore=()=>{
+    this.setState({score:this.state.score+1})
+  }
 
 }
 

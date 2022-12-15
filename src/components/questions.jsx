@@ -1,15 +1,18 @@
-
+import './style.css' ; 
 import React, { useState } from "react";
-import Endgame from "./endgame";
+import { Link} from 'react-router-dom';
+
 
 const Questions = (props) => {
-  const { questions } = props;
+  const { questions,increseScore,score} = props;
+  
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const nextQonclick = (isCorrect) => {
     if (isCorrect) 
-    setScore(score + 1);
+    increseScore()
+    
     const nextQuestion = currentQuestion + 1; //בכל לחיצה על אחד מכפתורי התשובות הפונקציה מעבירה אותילשאלה הבאה
     setCurrentQuestion(nextQuestion);
     if (nextQuestion < questions.length) {        //בודק שאנחנו לא עוברים את המספר המירבי של השאלות
@@ -20,7 +23,7 @@ const Questions = (props) => {
     }
   };
   const [showScore, setShowScore] = useState(false);
-  const [score, setScore] = useState(0);
+  
   
   return (
    
@@ -28,12 +31,21 @@ const Questions = (props) => {
         
          
         {showScore ? (
-            <div className="score-section"> You scored {score} out of {questions.length}
-            </div>)  : (
-            <>
-        
+            
+                <div className="mainQ">
+                    <div className='questionsNDanswers'>
+                    <Link to="/endgame">
 
-        <div className="question-text">
+            <button id="endbtn">End Game</button>
+            </Link>
+            </div >
+            </div>
+            
+            )  : (
+           
+        <div className='mainQ'>
+        <div className='questionsNDanswers'>
+        <div id='questionStyle' className="question-text">
           { questions[currentQuestion].questionText}
           
         </div>
@@ -48,7 +60,8 @@ const Questions = (props) => {
             
            ) )}
         </div>
-        </>
+        </div>
+        </div>
        )}
        
       </div>

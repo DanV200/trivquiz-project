@@ -14,8 +14,6 @@ const Startpage = (props) => {
          <div className='main' >
            
           <div className='aaa'>
-           
-           
             <Link to='/questions'>
             <button className='startdiv' onClick ={()=>props.randomQ()} > Start Game</button>
             </Link>
